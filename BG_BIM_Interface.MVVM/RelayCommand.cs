@@ -10,7 +10,7 @@ namespace BG_BIM_Interface.MVVM
     public class RelayCommand : ICommand
     {
         private Action _mAction { get; set; }
-        public event EventHandler CanExecuteChanged;
+        public event EventHandler CanExecuteChanged = (sender, e) => { };
 
         public RelayCommand(Action action)
         {
