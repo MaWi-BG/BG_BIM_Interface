@@ -9,16 +9,16 @@ namespace BG_BIM_Interface.Rhinoceros
     /// attributes in AssemblyInfo.cs (you might need to click "Project" ->
     /// "Show All Files" to see it in the "Solution Explorer" window).</para>
     ///</summary>
-    public class BGBIMInterfaceRhinocerosPlugIn : Rhino.PlugIns.PlugIn
+    public class BgBimInterfaceRhinocerosPlugIn : Rhino.PlugIns.PlugIn
 
     {
-        public BGBIMInterfaceRhinocerosPlugIn()
+        public BgBimInterfaceRhinocerosPlugIn()
         {
             Instance = this;
         }
 
         ///<summary>Gets the only instance of the BGBIMInterfaceRhinocerosPlugIn plug-in.</summary>
-        public static BGBIMInterfaceRhinocerosPlugIn Instance
+        public static BgBimInterfaceRhinocerosPlugIn Instance
         {
             get; private set;
         }

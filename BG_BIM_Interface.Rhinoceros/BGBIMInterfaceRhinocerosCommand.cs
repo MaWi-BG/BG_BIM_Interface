@@ -8,9 +8,9 @@ using System.Collections.Generic;
 
 namespace BG_BIM_Interface.Rhinoceros
 {
-    public class BGBIMInterfaceRhinocerosCommand : Command
+    public class BgBimInterfaceRhinocerosCommand : Command
     {
-        public BGBIMInterfaceRhinocerosCommand()
+        public BgBimInterfaceRhinocerosCommand()
         {
             // Rhino only creates one instance of each command class defined in a
             // plug-in, so it is safe to store a refence in a static property.
@@ -18,7 +18,7 @@ namespace BG_BIM_Interface.Rhinoceros
         }
 
         ///<summary>The only instance of this command.</summary>
-        public static BGBIMInterfaceRhinocerosCommand Instance
+        public static BgBimInterfaceRhinocerosCommand Instance
         {
             get; private set;
         }
