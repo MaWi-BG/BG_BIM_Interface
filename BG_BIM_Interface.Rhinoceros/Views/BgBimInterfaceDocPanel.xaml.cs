@@ -25,13 +25,8 @@ namespace BG_BIM_Interface.Rhinoceros.Views
         public BgBimInterfaceDocPanel(uint documentSerialNumber)
         {
             DataContext = new BgBimInterfaceDocPanelViewModel(documentSerialNumber);
-            InitializeComponent();
+            //InitializeComponent();
             Instance = this;
-        }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
+        }       
     }
 }
