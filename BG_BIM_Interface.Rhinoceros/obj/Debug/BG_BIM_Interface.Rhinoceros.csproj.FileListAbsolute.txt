@@ -1,0 +1,11 @@
+C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.Rhinoceros\obj\Debug\BG_BIM_Interface.Rhinoceros.csprojAssemblyReference.cache
+C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.Rhinoceros\obj\Debug\Views\BgBimInterfaceDocPanel.g.cs
+C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.Rhinoceros\obj\Debug\BG_BIM_Interface.Rhinoceros_MarkupCompile.cache
+C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.Rhinoceros\obj\Debug\BG_BIM_Interface.Rhinoceros_MarkupCompile.lref
+C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.Rhinoceros\bin\BG_BIM_Interface.Rhinoceros.dll
+C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.Rhinoceros\bin\BG_BIM_Interface.Rhinoceros.pdb
+C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.Rhinoceros\obj\Debug\Views\BgBimInterfaceDocPanel.baml
+C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.Rhinoceros\obj\Debug\BG_BIM_Interface.Rhinoceros.g.resources
+C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.Rhinoceros\obj\Debug\BG_BIM_Interface.Rhinoceros.csproj.CoreCompileInputs.cache
+C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.Rhinoceros\obj\Debug\BG_BIM_Interface.Rhinoceros.dll
+C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.Rhinoceros\obj\Debug\BG_BIM_Interface.Rhinoceros.pdb
