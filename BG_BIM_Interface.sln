@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BG_BIM_Interface.ViewModels
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BG_BIM_Interface.MVVM", "BG_BIM_Interface.MVVM\BG_BIM_Interface.MVVM.csproj", "{A620B861-8983-4C9F-8EE6-FE0538236D66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BG_BIM_Interface.Rhinoceros", "BG_BIM_Interface.Rhinoceros\BG_BIM_Interface.Rhinoceros.csproj", "{C3C7EF53-1351-478F-A7B4-F8601719E96E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BG_BIM_Interface.Rhinoceros", "BG_BIM_Interface.Rhinoceros\BG_BIM_Interface.Rhinoceros.csproj", "{8D1289A7-8E82-43E1-ADF4-B28959594288}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{A620B861-8983-4C9F-8EE6-FE0538236D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A620B861-8983-4C9F-8EE6-FE0538236D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A620B861-8983-4C9F-8EE6-FE0538236D66}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C3C7EF53-1351-478F-A7B4-F8601719E96E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3C7EF53-1351-478F-A7B4-F8601719E96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3C7EF53-1351-478F-A7B4-F8601719E96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3C7EF53-1351-478F-A7B4-F8601719E96E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D1289A7-8E82-43E1-ADF4-B28959594288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1289A7-8E82-43E1-ADF4-B28959594288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1289A7-8E82-43E1-ADF4-B28959594288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1289A7-8E82-43E1-ADF4-B28959594288}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
