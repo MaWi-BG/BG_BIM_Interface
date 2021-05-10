@@ -14,3 +14,5 @@ C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interfa
 C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.UI\bin\Debug\BG_BIM_Interface.MVVM.pdb
 C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.UI\obj\Debug\Main\BgBimInterfaceMain.g.cs
 C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.UI\obj\Debug\Main\BgBimInterfaceMain.baml
+C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.UI\obj\Debug\Controls\myCard_A.g.cs
+C:\Users\mwittich\Desktop\HOME_OFFICE\04-SOFTWARE\01-Repositories\BG_BIM_Interface\BG_BIM_Interface.UI\obj\Debug\Controls\myCard_A.baml
