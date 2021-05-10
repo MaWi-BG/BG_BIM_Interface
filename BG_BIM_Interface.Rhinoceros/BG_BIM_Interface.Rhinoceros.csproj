@@ -81,6 +81,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BG_BIM_Interface.UI\BG_BIM_Interface.UI.csproj">
+      <Project>{afe98f5e-eee7-4de6-ae0c-a6e7d8220c9a}</Project>
+      <Name>BG_BIM_Interface.UI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BG_BIM_Interface.ViewModels\BG_BIM_Interface.ViewModels.csproj">
       <Project>{e1a03f2e-1f46-4e56-bec3-70da7db059a1}</Project>
       <Name>BG_BIM_Interface.ViewModels</Name>

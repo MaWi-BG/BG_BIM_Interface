@@ -12,19 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BG_BIM_Interface.ViewModels;
 
-namespace BG_BIM_Interface.UI
+namespace BG_BIM_Interface.UI.Main
 {
     /// <summary>
-    /// Interaction logic for MainView.xaml
+    /// Interaction logic for BgBimInterfaceMain.xaml
     /// </summary>
-    public partial class MainView : Window
+    public partial class BgBimInterfaceMain : UserControl
     {
-        public MainView()
+        public BgBimInterfaceMain()
         {
             InitializeComponent();
-            this.DataContext = new MainViewModel();
         }
     }
 }
