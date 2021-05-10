@@ -16,19 +16,19 @@ using System.Runtime.InteropServices;
 
 // Icons should be Windows .ico files and contain 32-bit images in the following sizes: 16, 24, 32, 48, and 256.
 // This is a Rhino 6-only description.
-[assembly: PlugInDescription(DescriptionType.Icon, "BG_BIM_Interface.EmbeddedResources.plugin-utility.ico")]
+[assembly: PlugInDescription(DescriptionType.Icon, "BG_BIM_Interface.Rhinoceros.EmbeddedResources.plugin-utility.ico")]
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BG_BIM_Interface")]
+[assembly: AssemblyTitle("BG_BIM_Interface.Rhinoceros")]
 
 // This will be used also for the plug-in description.
-[assembly: AssemblyDescription("BG_BIM_Interface utility plug-in")]
+[assembly: AssemblyDescription("BG_BIM_Interface.Rhinoceros utility plug-in")]
 
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BG_BIM_Interface")]
+[assembly: AssemblyProduct("BG_BIM_Interface.Rhinoceros")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -39,7 +39,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c54057b6-5c26-4665-97c1-eeb29f23c44f")] // This will also be the Guid of the Rhino plug-in
+[assembly: Guid("c3c7ef53-1351-478f-a7b4-f8601719e96e")] // This will also be the Guid of the Rhino plug-in
 
 // Version information for an assembly consists of the following four values:
 //

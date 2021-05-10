@@ -1,5 +1,5 @@
 ﻿
-namespace BG_BIM_Interface
+namespace BG_BIM_Interface.Rhinoceros
 {
     ///<summary>
     /// <para>Every RhinoCommon .rhp assembly must have one and only one PlugIn-derived
@@ -9,16 +9,16 @@ namespace BG_BIM_Interface
     /// attributes in AssemblyInfo.cs (you might need to click "Project" ->
     /// "Show All Files" to see it in the "Solution Explorer" window).</para>
     ///</summary>
-    public class BGBIMInterfacePlugIn : Rhino.PlugIns.PlugIn
+    public class BGBIMInterfaceRhinocerosPlugIn : Rhino.PlugIns.PlugIn
 
     {
-        public BGBIMInterfacePlugIn()
+        public BGBIMInterfaceRhinocerosPlugIn()
         {
             Instance = this;
         }
 
-        ///<summary>Gets the only instance of the BGBIMInterfacePlugIn plug-in.</summary>
-        public static BGBIMInterfacePlugIn Instance
+        ///<summary>Gets the only instance of the BGBIMInterfaceRhinocerosPlugIn plug-in.</summary>
+        public static BGBIMInterfaceRhinocerosPlugIn Instance
         {
             get; private set;
         }

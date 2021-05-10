@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BG_BIM_Interface", "BG_BIM_Interface\BG_BIM_Interface.csproj", "{C54057B6-5C26-4665-97C1-EEB29F23C44F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BG_BIM_Interface.UI", "BG_BIM_Interface.UI\BG_BIM_Interface.UI.csproj", "{AFE98F5E-EEE7-4DE6-AE0C-A6E7D8220C9A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BG_BIM_Interface.Desktop", "BG_BIM_Interface.Desktop\BG_BIM_Interface.Desktop.csproj", "{BD960D8D-97A2-4F59-9CCB-E28361C007E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BG_BIM_Interface.ViewModels", "BG_BIM_Interface.ViewModels\BG_BIM_Interface.ViewModels.csproj", "{E1A03F2E-1F46-4E56-BEC3-70DA7DB059A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BG_BIM_Interface.MVVM", "BG_BIM_Interface.MVVM\BG_BIM_Interface.MVVM.csproj", "{A620B861-8983-4C9F-8EE6-FE0538236D66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BG_BIM_Interface.Rhinoceros", "BG_BIM_Interface.Rhinoceros\BG_BIM_Interface.Rhinoceros.csproj", "{C3C7EF53-1351-478F-A7B4-F8601719E96E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,18 +17,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C54057B6-5C26-4665-97C1-EEB29F23C44F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C54057B6-5C26-4665-97C1-EEB29F23C44F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C54057B6-5C26-4665-97C1-EEB29F23C44F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C54057B6-5C26-4665-97C1-EEB29F23C44F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AFE98F5E-EEE7-4DE6-AE0C-A6E7D8220C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AFE98F5E-EEE7-4DE6-AE0C-A6E7D8220C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFE98F5E-EEE7-4DE6-AE0C-A6E7D8220C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFE98F5E-EEE7-4DE6-AE0C-A6E7D8220C9A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BD960D8D-97A2-4F59-9CCB-E28361C007E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD960D8D-97A2-4F59-9CCB-E28361C007E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD960D8D-97A2-4F59-9CCB-E28361C007E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD960D8D-97A2-4F59-9CCB-E28361C007E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E1A03F2E-1F46-4E56-BEC3-70DA7DB059A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E1A03F2E-1F46-4E56-BEC3-70DA7DB059A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1A03F2E-1F46-4E56-BEC3-70DA7DB059A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +29,10 @@ Global
 		{A620B861-8983-4C9F-8EE6-FE0538236D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A620B861-8983-4C9F-8EE6-FE0538236D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A620B861-8983-4C9F-8EE6-FE0538236D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C7EF53-1351-478F-A7B4-F8601719E96E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C7EF53-1351-478F-A7B4-F8601719E96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C7EF53-1351-478F-A7B4-F8601719E96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C7EF53-1351-478F-A7B4-F8601719E96E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
