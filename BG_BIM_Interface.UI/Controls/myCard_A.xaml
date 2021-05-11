@@ -11,18 +11,13 @@
     <Grid Margin="10" Background="LightGray">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
-            <Expander HorizontalAlignment="Right"
-                      VerticalAlignment="Stretch"
-                      Background="DarkGray"
-                      Header="Expander-01"
-                      Grid.Row="0" Margin="0,0,0,0.2" Width="780">
-
-            </Expander>
+            <Label Content="MyLabel" Grid.Row="0"/>
+            <Button Content="MyButton" Grid.Row ="1"/>
         </Grid>
     </Grid>
 </UserControl>

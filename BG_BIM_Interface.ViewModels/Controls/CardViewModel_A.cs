@@ -7,7 +7,8 @@ using BG_BIM_Interface.MVVM;
 
 namespace BG_BIM_Interface.ViewModels.Controls
 {
-    public class CardViewModel: BaseViewModel
+    public class CardViewModel_A: BaseViewModel
     {
+        public string Test { get; set; }
     }
 }

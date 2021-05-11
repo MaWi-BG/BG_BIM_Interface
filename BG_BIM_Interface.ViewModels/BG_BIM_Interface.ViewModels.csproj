@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\CardViewModel.cs" />
+    <Compile Include="Controls\CardViewModel_A.cs" />
     <Compile Include="MainViewModel.cs" />
     <Compile Include="Main\BgBimInterfaceCoreViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
