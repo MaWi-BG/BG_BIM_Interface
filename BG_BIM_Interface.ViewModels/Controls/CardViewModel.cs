@@ -25,8 +25,10 @@ namespace BG_BIM_Interface.ViewModels.Controls
             GH_doc = Grasshopper.Instances.ActiveCanvas.Document;
             //GH_doc.AssociateWithRhinoDocument();
             this.PanelName = name;
+            GetPanel();
+            UserText = "Default";
             SetPanelCommand = new RelayCommand(this.SetPanel);
-        }
+        }       
         public void GetPanel()
         {
             foreach(IGH_DocumentObject obj in GH_doc.Objects)

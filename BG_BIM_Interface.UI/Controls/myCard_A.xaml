@@ -24,16 +24,18 @@
                 Content="MyLabel"
                 Grid.Row="0"/>
             <Button 
-                Content="MyButton"
+                Content="Set"
                 Grid.Row="2"
                 Grid.Column="0"
                 HorizontalAlignment="Left"
                 Width="150"
-                Height="50"/>
+                Height="50"
+                Command="{Binding SetPanelCommand}">
+            </Button>
             <ScrollViewer
                 Grid.Row="1"
                 Grid.Column="0">
-                <TextBox Text="HelloWorld"/>
+                <TextBox Text="{Binding UserText}"/>
             </ScrollViewer>
             
         </Grid>

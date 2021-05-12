@@ -15,6 +15,15 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
+            <ScrollViewer Grid.Row="2" ScrollChanged="ScrollViewer_ScrollChanged">
+                <ItemsControl Margin="0,5" Grid.Row="0">
+                    <ItemsControl.Resources>
+                        <DataTemplate DataType="{x:Type controls:CardViewModel}">
+                            <localControls:myCard_A/>
+                        </DataTemplate>
+                    </ItemsControl.Resources>
+                </ItemsControl>
+            </ScrollViewer>
             <Expander 
                 Header="Expander-01"
                 Background="DarkGray"
@@ -49,7 +58,7 @@
                         <TextBox Text="HelloWorld"/>
                     </ScrollViewer>
 
-                </Grid>
+                </Grid>                
             </Expander>
             <Expander 
                 Header="Expander-02"

@@ -16,5 +16,6 @@ namespace BG_BIM_Interface.ViewModels.Main
         {            
             Instance = this;
         }
+      
     }
 }

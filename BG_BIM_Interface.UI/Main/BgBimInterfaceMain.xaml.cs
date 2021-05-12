@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace BG_BIM_Interface.UI.Main
 {
     /// <summary>
@@ -23,6 +24,10 @@ namespace BG_BIM_Interface.UI.Main
         public BgBimInterfaceMain()
         {
             InitializeComponent();
+        }
+        private void ScrollViewer_ScrollChanged(object sender, ScrollChangedEventArgs e)
+        {
+
         }
     }
 }
