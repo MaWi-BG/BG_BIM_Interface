@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BG_BIM_Interface.UI</RootNamespace>
     <AssemblyName>BG_BIM_Interface.UI</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -64,6 +65,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BG_BIM_Interface.MVVM\BG_BIM_Interface.MVVM.csproj">
+      <Project>{a620b861-8983-4c9f-8ee6-fe0538236d66}</Project>
+      <Name>BG_BIM_Interface.MVVM</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BG_BIM_Interface.ViewModels\BG_BIM_Interface.ViewModels.csproj">
       <Project>{e1a03f2e-1f46-4e56-bec3-70da7db059a1}</Project>
       <Name>BG_BIM_Interface.ViewModels</Name>

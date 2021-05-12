@@ -81,6 +81,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BG_BIM_Interface.MVVM\BG_BIM_Interface.MVVM.csproj">
+      <Project>{a620b861-8983-4c9f-8ee6-fe0538236d66}</Project>
+      <Name>BG_BIM_Interface.MVVM</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BG_BIM_Interface.UI\BG_BIM_Interface.UI.csproj">
       <Project>{afe98f5e-eee7-4de6-ae0c-a6e7d8220c9a}</Project>
       <Name>BG_BIM_Interface.UI</Name>
