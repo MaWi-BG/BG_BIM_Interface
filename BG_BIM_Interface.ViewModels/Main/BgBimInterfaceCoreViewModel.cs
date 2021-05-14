@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using BG_BIM_Interface.MVVM;
 using Grasshopper.Kernel;
@@ -14,12 +9,14 @@ namespace BG_BIM_Interface.ViewModels.Main
     public class BgBimInterfaceCoreViewModel : BaseViewModel
     {
         private readonly GH_Document GH_doc;
-        private GH_Panel _panel { get; set; }
+        private Guid _panelGuid;
+        private GH_Panel _panel;
         private string _panelName;
         private string _userText;
         public static BgBimInterfaceCoreViewModel Instance;
+        public bool test { get; set; }
 
-        ICommand SetPanelCommand { get; set; }
+        public ICommand SetPanelCommand { get; set; }
         public string PanelName
         {
             get { return _panelName; }
@@ -57,6 +54,7 @@ namespace BG_BIM_Interface.ViewModels.Main
             this._panelName = name;
             GetPanel();
             this._userText = "Default";
+            this.test = false;
             SetPanelCommand = new RelayCommand(this.SetPanel);
         }
 
@@ -69,15 +67,18 @@ namespace BG_BIM_Interface.ViewModels.Main
                     GH_Panel _panel_tmp = obj as GH_Panel;
                     if (_panel_tmp.NickName == this._panelName)
                     {
+                        _panelGuid = _panel_tmp.ComponentGuid;
                         this._panel = _panel_tmp;
                     }
                 }
             }
         }
         public void SetPanel()
-        {
+        {            
+            this.test = true;
+            
             this._panel.UserText = this._userText;
-            this._panel.ExpireSolution(true);
+            this._panel.ExpireSolution(true);           
         }
     }
 }

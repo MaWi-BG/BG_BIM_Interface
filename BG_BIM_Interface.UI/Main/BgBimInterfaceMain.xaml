@@ -45,7 +45,8 @@
                         Content="InputText"
                         Grid.Row="0">
                     </Label>
-                    <Button 
+                    <Button
+                        Name="MyButton"
                         Content="run"
                         Grid.Row="2"
                         Grid.Column="0"
@@ -59,6 +60,7 @@
                         Grid.Column="0">
                         <TextBox Text="HelloWorld" TextWrapping="Wrap" AcceptsReturn="true"/>
                     </ScrollViewer>
+                    <Label Grid.Row="3" Content="{Binding test}"/>
 
                 </Grid>                
             </Expander>
