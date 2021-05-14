@@ -14,8 +14,7 @@ namespace BG_BIM_Interface.ViewModels.Main
         private string _panelName;
         private string _userText;
         public static BgBimInterfaceCoreViewModel Instance;
-        public bool test { get; set; }
-
+        
         public ICommand SetPanelCommand { get; set; }
         public string PanelName
         {
@@ -52,9 +51,7 @@ namespace BG_BIM_Interface.ViewModels.Main
             GH_doc = Grasshopper.Instances.ActiveCanvas.Document;
             //GH_doc.AssociateWithRhinoDocument();
             this._panelName = name;
-            GetPanel();
-            this._userText = "Default";
-            this.test = false;
+            GetPanel();           
             SetPanelCommand = new RelayCommand(this.SetPanel);
         }
 
@@ -74,9 +71,7 @@ namespace BG_BIM_Interface.ViewModels.Main
             }
         }
         public void SetPanel()
-        {            
-            this.test = true;
-            
+        {                    
             this._panel.UserText = this._userText;
             this._panel.ExpireSolution(true);           
         }

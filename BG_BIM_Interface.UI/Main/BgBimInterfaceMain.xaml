@@ -58,7 +58,7 @@
                     <ScrollViewer
                         Grid.Row="1"
                         Grid.Column="0">
-                        <TextBox Text="HelloWorld" TextWrapping="Wrap" AcceptsReturn="true"/>
+                        <TextBox Text="{Binding UserText}" TextWrapping="Wrap" AcceptsReturn="true"/>
                     </ScrollViewer>
                     <Label Grid.Row="3" Content="{Binding test}"/>
 
