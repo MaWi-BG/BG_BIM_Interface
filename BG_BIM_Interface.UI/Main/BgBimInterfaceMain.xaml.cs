@@ -24,10 +24,11 @@ namespace BG_BIM_Interface.UI.Main
         public BgBimInterfaceMain()
         {
             InitializeComponent();
+            this.DataContext = new ViewModels.Main.BgBimInterfaceCoreViewModel(GH_InputPanel.Content.ToString());
         }
         private void ScrollViewer_ScrollChanged(object sender, ScrollChangedEventArgs e)
         {
 
-        }
+        }        
     }
 }

@@ -15,7 +15,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <ScrollViewer Grid.Row="2" ScrollChanged="ScrollViewer_ScrollChanged">
+            <!--<ScrollViewer Grid.Row="2" ScrollChanged="ScrollViewer_ScrollChanged">
                 <ItemsControl Margin="0,5" Grid.Row="0">
                     <ItemsControl.Resources>
                         <DataTemplate DataType="{x:Type controls:CardViewModel}">
@@ -23,7 +23,7 @@
                         </DataTemplate>
                     </ItemsControl.Resources>
                 </ItemsControl>
-            </ScrollViewer>
+            </ScrollViewer>-->
             <Expander 
                 Header="Expander-01"
                 Background="DarkGray"
@@ -41,21 +41,23 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Label 
-                        Content="MyLabel"
+                        Name="GH_InputPanel"
+                        Content="InputText"
                         Grid.Row="0">
                     </Label>
                     <Button 
-                        Content="MyButton"
+                        Content="run"
                         Grid.Row="2"
                         Grid.Column="0"
                         HorizontalAlignment="Left"
-                        Width="150"
-                        Height="50">
+                        Width="50"
+                        Height="25"
+                        Command="{Binding SetPanelCommand}">
                     </Button>
                     <ScrollViewer
                         Grid.Row="1"
                         Grid.Column="0">
-                        <TextBox Text="HelloWorld"/>
+                        <TextBox Text="HelloWorld" TextWrapping="Wrap" AcceptsReturn="true"/>
                     </ScrollViewer>
 
                 </Grid>                
