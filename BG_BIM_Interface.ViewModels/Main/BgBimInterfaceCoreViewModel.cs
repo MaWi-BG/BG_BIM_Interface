@@ -3,6 +3,8 @@ using System.Windows.Input;
 using BG_BIM_Interface.MVVM;
 using Grasshopper.Kernel;
 using Grasshopper.Kernel.Special;
+using Grasshopper.Kernel.Parameters;
+using Grasshopper.Kernel.Types;
 
 namespace BG_BIM_Interface.ViewModels.Main
 {
@@ -13,9 +15,6 @@ namespace BG_BIM_Interface.ViewModels.Main
         private GH_Panel _panel;
         private string _panelName;
         private string _userText;
-        public static BgBimInterfaceCoreViewModel Instance;
-        
-        public ICommand SetPanelCommand { get; set; }
         public string PanelName
         {
             get { return _panelName; }
@@ -25,7 +24,6 @@ namespace BG_BIM_Interface.ViewModels.Main
                 this.RaisePropertyChanged(nameof(this.PanelName));
             }
         }
-
         public string UserText
         {
             get { return _userText; }
@@ -44,15 +42,63 @@ namespace BG_BIM_Interface.ViewModels.Main
                 this.RaisePropertyChanged(nameof(this.Panel));
             }
         }
-        
-        public BgBimInterfaceCoreViewModel(string name)
+
+        private string _toggleName;
+        private GH_BooleanToggle _GH_Toggle;
+        private bool _toggle;
+        public string ToggleName
+        {
+            get { return _toggleName; }
+            set
+            {
+                this._toggleName = value;
+                this.RaisePropertyChanged(nameof(this.ToggleName));
+            }
+        }
+        public bool Toggle
+        {
+            get { return _toggle; }
+            set
+            { 
+                this._toggle = value;
+                this.RaisePropertyChanged(nameof(this.Toggle));
+            }
+        }
+       
+
+        private string _numberName;
+        private Param_Number _GH_NumberParam;
+        private double _number;
+        public double Number
+        {
+            get { return this._number; }
+            set
+            {
+                this._number = value;
+                this.RaisePropertyChanged(nameof(this.Number));
+            }
+        }
+
+        public static BgBimInterfaceCoreViewModel Instance;
+        public ICommand SetPanelCommand { get; set; }
+        public ICommand SetToggleCommand { get; set; }
+        public ICommand SetNumberCommand { get; set; }
+
+
+        public BgBimInterfaceCoreViewModel(string panel_name,string toggle_name,string number_name)
         {            
             Instance = this;
             GH_doc = Grasshopper.Instances.ActiveCanvas.Document;
             //GH_doc.AssociateWithRhinoDocument();
-            this._panelName = name;
-            GetPanel();           
+            this._panelName = panel_name;
+            this._toggleName = toggle_name;
+            this._numberName = number_name;
+            GetPanel();
+            GetToggle();
+            GetNumber();
             SetPanelCommand = new RelayCommand(this.SetPanel);
+            SetToggleCommand = new RelayCommand(this.SetToggle);
+            SetNumberCommand = new RelayCommand(this.SetNumber);
         }
 
         public void GetPanel()
@@ -70,10 +116,53 @@ namespace BG_BIM_Interface.ViewModels.Main
                 }
             }
         }
+        public void GetToggle()
+        {
+            foreach (IGH_DocumentObject obj in GH_doc.Objects)
+            {
+                if (obj.GetType().ToString() == "Grasshopper.Kernel.Special.GH_BooleanToggle")
+                {
+                    GH_BooleanToggle _toggle_tmp = obj as GH_BooleanToggle;
+                    if (_toggle_tmp.NickName == _toggleName)
+                    {
+                        _GH_Toggle = _toggle_tmp;
+                        _toggle = _GH_Toggle.Value;                        
+                    }
+                }
+            }
+        }
+        public void GetNumber()
+        {
+            foreach (IGH_DocumentObject obj in GH_doc.Objects)
+            {
+                if (obj.GetType().ToString() == "Grasshopper.Kernel.Parameters.Param_Number")
+                {
+                    Param_Number _numberParam_tmp = obj as Param_Number;
+                    if (_numberParam_tmp.NickName == _numberName)
+                    {
+                        _GH_NumberParam = _numberParam_tmp;                        
+                    }
+                }
+            }
+        }
         public void SetPanel()
         {                    
             this._panel.UserText = this._userText;
             this._panel.ExpireSolution(true);           
+        }
+        public void SetToggle()
+        {
+            this._toggle = !_toggle;
+            this._GH_Toggle.Value = _toggle;
+            this._GH_Toggle.ExpireSolution(true);
+        }
+        public void SetNumber()
+        {
+            _GH_NumberParam.Access = GH_ParamAccess.item;
+            _GH_NumberParam.PersistentData.Clear();
+            _GH_NumberParam.SetPersistentData(new GH_Number(_number));
+            //numberParam.AddVolatileData(new GH_Path(0), 0, new GH_Number(val));
+            _GH_NumberParam.ExpireSolution(true);
         }
     }
 }

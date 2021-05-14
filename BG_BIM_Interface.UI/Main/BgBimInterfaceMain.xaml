@@ -10,10 +10,11 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Margin="10" Background="LightGray">
         <Grid>
-            <Grid.RowDefinitions>
+            <Grid.RowDefinitions>                
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <!--<ScrollViewer Grid.Row="2" ScrollChanged="ScrollViewer_ScrollChanged">
                 <ItemsControl Margin="0,5" Grid.Row="0">
@@ -25,9 +26,9 @@
                 </ItemsControl>
             </ScrollViewer>-->
             <Expander 
-                Header="Expander-01"
+                Header="SetTextPanel"
                 Background="DarkGray"
-                Grid.Row="1"                
+                Grid.Row="0"                
                 Margin="0,0.2,0,0">
                 <Grid Background="LightGray">
                     <Grid.RowDefinitions>
@@ -41,12 +42,11 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Label 
-                        Name="GH_InputPanel"
+                        Name="GH_SetPanel"
                         Content="InputText"
                         Grid.Row="0">
                     </Label>
-                    <Button
-                        Name="MyButton"
+                    <Button                        
                         Content="run"
                         Grid.Row="2"
                         Grid.Column="0"
@@ -59,16 +59,58 @@
                         Grid.Row="1"
                         Grid.Column="0">
                         <TextBox Text="{Binding UserText}" TextWrapping="Wrap" AcceptsReturn="true"/>
-                    </ScrollViewer>
-                    <Label Grid.Row="3" Content="{Binding test}"/>
-
+                    </ScrollViewer>                   
                 </Grid>                
             </Expander>
             <Expander 
-                Header="Expander-02"
+                Header="SetToggle"
+                Background="DarkGray"
+                Grid.Row="1"                
+                Margin="0,0.2,0,0">
+                <Grid Background="LightGray">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>                    
+                    <Label 
+                        Name="GH_SetToggle"
+                        Content="InputToggle"
+                        Grid.Row="0">
+                    </Label>
+                    <Button                        
+                        Content="{Binding Toggle}"
+                        Grid.Row="1"                       
+                        HorizontalAlignment="Left"
+                        Width="50"
+                        Height="25"
+                        Command="{Binding SetToggleCommand}">
+                    </Button>                  
+                </Grid>
+            </Expander>
+            <Expander 
+                Header="SetNumber"
                 Background="DarkGray"
                 Grid.Row="2"                
                 Margin="0,0.2,0,0">
+                <Grid Background="LightGray">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label 
+                        Name="GH_SetNumber"
+                        Content="InputNumber"
+                        Grid.Row="0">
+                    </Label>
+                    <Slider 
+                        Grid.Row="1"
+                        Minimum="0.0"
+                        Maximum="100.0"
+                        Value="{Binding Number}">                        
+                    </Slider>
+                </Grid>
             </Expander>
         </Grid>
     </Grid>
