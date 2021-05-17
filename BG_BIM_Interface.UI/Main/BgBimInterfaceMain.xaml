@@ -113,16 +113,18 @@
                     <Slider 
                         Name="SetNumberSlider"
                         Grid.Row="1"
-                        Grid.Column="0"                        
+                        Grid.Column="0"  
+                        VerticalAlignment="Center"
                         Maximum="100.0"
                         TickPlacement="BottomRight"
                         TickFrequency="5"
-                        Value="{Binding Number}">                        
+                        Value="{Binding Number}"> 
                     </Slider>
                     <TextBox 
                         Grid.Row="1"
                         Grid.Column="1" 
                         Height="20"
+                        VerticalAlignment="Center"
                         Text="{Binding Number}">
                     </TextBox>
                 </Grid>

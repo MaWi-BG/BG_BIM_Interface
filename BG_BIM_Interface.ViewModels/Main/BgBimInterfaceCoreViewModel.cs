@@ -6,6 +6,7 @@ using Grasshopper.Kernel.Special;
 using Grasshopper.Kernel.Parameters;
 using Grasshopper.Kernel.Types;
 
+
 namespace BG_BIM_Interface.ViewModels.Main
 {
     public class BgBimInterfaceCoreViewModel : BaseViewModel
@@ -60,8 +61,8 @@ namespace BG_BIM_Interface.ViewModels.Main
             get { return _toggle; }
             set
             { 
-                this._toggle = value;
-                this.RaisePropertyChanged(nameof(this.Toggle));
+                _toggle = value;
+                RaisePropertyChanged(nameof(this.Toggle));
             }
         }
        
@@ -74,8 +75,8 @@ namespace BG_BIM_Interface.ViewModels.Main
             get { return this._number; }
             set
             {
-                this._number = value;
-                this.RaisePropertyChanged(nameof(this.Number));
+                _number = value;
+                RaisePropertyChanged(nameof(this.Number));
             }
         }
 
@@ -90,9 +91,9 @@ namespace BG_BIM_Interface.ViewModels.Main
             Instance = this;
             GH_doc = Grasshopper.Instances.ActiveCanvas.Document;
             //GH_doc.AssociateWithRhinoDocument();
-            this._panelName = panel_name;
-            this._toggleName = toggle_name;
-            this._numberName = number_name;
+            _panelName = panel_name;
+            _toggleName = toggle_name;
+            _numberName = number_name;
             GetPanel();
             GetToggle();
             GetNumber();
@@ -111,7 +112,7 @@ namespace BG_BIM_Interface.ViewModels.Main
                     if (_panel_tmp.NickName == this._panelName)
                     {
                         _panelGuid = _panel_tmp.ComponentGuid;
-                        this._panel = _panel_tmp;
+                        _panel = _panel_tmp;
                     }
                 }
             }
@@ -140,6 +141,7 @@ namespace BG_BIM_Interface.ViewModels.Main
                     Param_Number _numberParam_tmp = obj as Param_Number;
                     if (_numberParam_tmp.NickName == _numberName)
                     {
+                        System.Diagnostics.Debug.WriteLine("TEST");
                         _GH_NumberParam = _numberParam_tmp;                        
                     }
                 }
@@ -147,14 +149,14 @@ namespace BG_BIM_Interface.ViewModels.Main
         }
         public void SetPanel()
         {                    
-            this._panel.UserText = this._userText;
-            this._panel.ExpireSolution(true);           
+            _panel.UserText = this._userText;
+            _panel.ExpireSolution(true);           
         }
         public void SetToggle()
         {
-            this._toggle = !_toggle;
-            this._GH_Toggle.Value = _toggle;
-            this._GH_Toggle.ExpireSolution(true);
+            _toggle = !_toggle;
+            _GH_Toggle.Value = _toggle;
+            _GH_Toggle.ExpireSolution(true);
         }
         public void SetNumber()
         {
