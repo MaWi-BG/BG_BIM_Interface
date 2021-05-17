@@ -69,14 +69,15 @@ namespace BG_BIM_Interface.ViewModels.Main
 
         private string _numberName;
         private Param_Number _GH_NumberParam;
+        private GH_Panel _numberPanel;
         private double _number;
         public double Number
         {
-            get { return this._number; }
+            get { return Math.Round(_number,2); }
             set
             {
                 _number = value;
-                RaisePropertyChanged(nameof(this.Number));
+                RaisePropertyChanged(nameof(Number));
             }
         }
 
@@ -89,7 +90,21 @@ namespace BG_BIM_Interface.ViewModels.Main
         public BgBimInterfaceCoreViewModel(string panel_name,string toggle_name,string number_name)
         {            
             Instance = this;
+
+            //dynamic gh = Rhino.RhinoApp.GetPlugInObject("Grasshopper");
+            //if (!gh.IsEditorLoaded())
+            //{
+            //    try
+            //    {
+            //        gh.LoadEditor();
+            //    }
+            //    catch (Exception e)
+            //    {
+
+            //    }
+            //}
             GH_doc = Grasshopper.Instances.ActiveCanvas.Document;
+            
             //GH_doc.AssociateWithRhinoDocument();
             _panelName = panel_name;
             _toggleName = toggle_name;
@@ -97,9 +112,9 @@ namespace BG_BIM_Interface.ViewModels.Main
             GetPanel();
             GetToggle();
             GetNumber();
-            SetPanelCommand = new RelayCommand(this.SetPanel);
-            SetToggleCommand = new RelayCommand(this.SetToggle);
-            SetNumberCommand = new RelayCommand(this.SetNumber);
+            SetPanelCommand = new RelayCommand(SetPanel);
+            SetToggleCommand = new RelayCommand(SetToggle);
+            SetNumberCommand = new RelayCommand(SetNumber);
         }
 
         public void GetPanel()
@@ -134,6 +149,17 @@ namespace BG_BIM_Interface.ViewModels.Main
         }
         public void GetNumber()
         {
+            //foreach (IGH_DocumentObject obj in GH_doc.Objects)
+            //{
+            //    if (obj.GetType().ToString() == "Grasshopper.Kernel.Parameters.GH_Panel")
+            //    {
+            //        GH_Panel _panel_tmp = obj as GH_Panel;
+            //        if (_panel_tmp.NickName == "InputNumber_txt")
+            //        {                        
+            //            _numberPanel = _panel_tmp;
+            //        }
+            //    }
+            //}
             foreach (IGH_DocumentObject obj in GH_doc.Objects)
             {
                 if (obj.GetType().ToString() == "Grasshopper.Kernel.Parameters.Param_Number")
@@ -142,14 +168,14 @@ namespace BG_BIM_Interface.ViewModels.Main
                     if (_numberParam_tmp.NickName == _numberName)
                     {
                         System.Diagnostics.Debug.WriteLine("TEST");
-                        _GH_NumberParam = _numberParam_tmp;                        
+                        _GH_NumberParam = _numberParam_tmp;
                     }
                 }
             }
         }
         public void SetPanel()
         {                    
-            _panel.UserText = this._userText;
+            _panel.UserText = _userText;
             _panel.ExpireSolution(true);           
         }
         public void SetToggle()

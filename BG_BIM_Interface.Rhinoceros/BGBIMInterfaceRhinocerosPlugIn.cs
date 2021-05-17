@@ -1,4 +1,7 @@
 ﻿
+using Rhino.PlugIns;
+using System;
+
 namespace BG_BIM_Interface.Rhinoceros
 {
     ///<summary>
@@ -13,15 +16,16 @@ namespace BG_BIM_Interface.Rhinoceros
 
     {
         public BgBimInterfaceRhinocerosPlugIn()
-        {
+        {           
             Instance = this;
+            
         }
 
         ///<summary>Gets the only instance of the BGBIMInterfaceRhinocerosPlugIn plug-in.</summary>
         public static BgBimInterfaceRhinocerosPlugIn Instance
         {
             get; private set;
-        }
+        }       
 
         // You can override methods here to change the plug-in behavior on
         // loading and shut down, add options pages to the Rhino _Option command

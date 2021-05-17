@@ -65,8 +65,8 @@ namespace BG_BIM_Interface.Rhinoceros
         {
             // Rhino only creates one instance of each command class defined in a
             // plug-in, so it is safe to store a refence in a static property.
-            Instance = this;
-            Rhino.UI.Panels.RegisterPanel(BgBimInterfaceRhinocerosPlugIn.Instance, typeof(BgBimInterfacePanelHost), "BgBimInterface", null);
+            Instance = this;           
+            Rhino.UI.Panels.RegisterPanel(BgBimInterfaceRhinocerosPlugIn.Instance, typeof(BgBimInterfacePanelHost), "BgBimInterface", null);            
         }
 
         ///<summary>The only instance of this command.</summary>
@@ -82,9 +82,10 @@ namespace BG_BIM_Interface.Rhinoceros
         }
 
         protected override Result RunCommand(RhinoDoc doc, RunMode mode)
-        {
+        {           
             RhinoApp.WriteLine("Launching BG BIM Interface");
             this.LaunchBimInterface();
+            
             return Result.Success;
         }
 
