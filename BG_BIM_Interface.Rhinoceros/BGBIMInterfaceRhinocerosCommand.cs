@@ -82,7 +82,7 @@ namespace BG_BIM_Interface.Rhinoceros
         }
 
         protected override Result RunCommand(RhinoDoc doc, RunMode mode)
-        {           
+        {          
             RhinoApp.WriteLine("Launching BG BIM Interface");
             this.LaunchBimInterface();
             
